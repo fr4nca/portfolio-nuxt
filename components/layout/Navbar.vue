@@ -2,9 +2,6 @@
   <div class="nav">
     <div class="container">
       <ul class="nav-menu">
-        <div class="nav-logo">
-          <nuxt-link to="/" class="logo">Victor</nuxt-link>
-        </div>
         <div class="nav-links">
           <nuxt-link to="/" class="link">Home</nuxt-link>
           <nuxt-link to="/about" class="link">About</nuxt-link>
@@ -17,47 +14,40 @@
 
 <style lang="scss" scoped>
 .nav {
-  width: 100vw;
   background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: #fff;
   padding: 1.5rem;
+  font-size: 1.1rem;
 
   .nav-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .nav-logo {
-      .logo {
-        font-size: 2rem;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .logo:visited {
-        color: white;
-      }
-    }
+    justify-content: center;
 
     .nav-links {
       list-style: none;
       display: flex;
+      width: 80%;
+      justify-content: space-evenly;
 
       .link {
         padding: 1rem;
         border-radius: 8px;
+        border-bottom: solid 1px transparent;
         text-decoration: none;
-        margin: 0 15px;
-      }
 
-      .link:visited {
-        color: white;
-      }
+        &:visited {
+          color: #fff;
+        }
 
-      .link:hover {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom: solid 1px #f3f3f3;
+        &:hover {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom: solid 1px #fff;
+        }
       }
     }
   }

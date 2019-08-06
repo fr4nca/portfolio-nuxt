@@ -1,12 +1,18 @@
 <template>
-  <div class="container">
-    <h1>Oi</h1>
+  <div>
+    <Landing />
+    <Projects />
   </div>
 </template>
 
 <script>
-export default {};
-</script>
+import Landing from "~/components/Landing";
+import Projects from "~/components/Projects";
 
-<style>
-</style>
+export default {
+  components: {
+    Landing,
+    Projects
+  }
+};
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Navbar />
     <nuxt />
   </div>
@@ -15,8 +15,7 @@ export default {
 };
 </script>
 
-
-<style>
+<style lang="scss">
 *,
 *:before,
 *:after {
@@ -25,7 +24,6 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #333;
 }
 
 .container {
