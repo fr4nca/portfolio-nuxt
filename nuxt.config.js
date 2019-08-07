@@ -13,7 +13,8 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       }
-    ]
+    ],
+    script: [{ src: 'https://kit.fontawesome.com/57926f9989.js' }]
   },
   /*
    ** Customize the progress-bar color
