@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div id="navbar" class="nav">
     <div class="container">
       <ul class="nav-menu">
         <div class="nav-links">
@@ -12,8 +12,28 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    const nav = document.querySelector("#navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        nav.style.background = "rgba(31, 31, 31, 1)";
+        nav.style.padding = "0.4rem";
+      } else {
+        nav.style.background = "rgba(31, 31, 31, 0)";
+        nav.style.padding = "1.5rem";
+      }
+    });
+  }
+};
+</script>
+
+
 <style lang="scss" scoped>
 .nav {
+  transition: all ease-in 300ms;
   background: transparent;
   position: fixed;
   top: 0;
@@ -38,6 +58,7 @@
         border-radius: 8px;
         border-bottom: solid 1px transparent;
         text-decoration: none;
+        color: #fff;
 
         &:visited {
           color: #fff;
