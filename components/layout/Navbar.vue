@@ -16,7 +16,6 @@
 export default {
   mounted() {
     const nav = document.querySelector("#navbar");
-
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
         nav.style.background = "rgba(31, 31, 31, 1)";
@@ -33,7 +32,6 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  transition: all ease-in 300ms;
   background: transparent;
   position: fixed;
   top: 0;
@@ -42,6 +40,7 @@ export default {
   color: #fff;
   padding: 1.5rem;
   font-size: 1.1rem;
+  transition: all ease-in 300ms;
 
   .nav-menu {
     display: flex;

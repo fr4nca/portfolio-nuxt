@@ -14,7 +14,7 @@ export const actions = {
 
     try {
       let repos = await fetch(
-        'https://api.github.com/users/fr4nca/repos?page=1&per_page=100'
+        'https://api.github.com/users/fr4nca/repos?page=1&per_page=13&sort=created_at'
       ).then(res => res.json());
 
       repos = repos

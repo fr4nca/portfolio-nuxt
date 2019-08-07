@@ -27,7 +27,7 @@
 
 <style lang="scss" scoped>
 .content {
-  height: 100vh;
+  height: 70vh;
   background: url("~assets/landing.jpg") no-repeat center center/cover;
   color: white;
 
@@ -43,7 +43,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 102px;
+    margin-bottom: 51px;
 
     .lead-content {
       font-size: 1.8rem;
@@ -58,7 +58,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 102px;
+    margin-bottom: 51px;
 
     .skills-content {
       list-style: none;
