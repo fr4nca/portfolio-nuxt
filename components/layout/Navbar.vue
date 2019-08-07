@@ -38,7 +38,7 @@ export default {
   left: 0;
   width: 100%;
   color: #fff;
-  padding: 1.5rem;
+  padding: 2rem;
   font-size: 1.1rem;
   transition: all ease-in 300ms;
 

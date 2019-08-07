@@ -17,6 +17,8 @@ export const actions = {
         'https://api.github.com/users/fr4nca/repos?page=1&per_page=13&sort=created_at'
       ).then(res => res.json());
 
+      console.log(repos);
+
       repos = repos
         .filter(el => el.fork === false)
         .map(
@@ -25,6 +27,7 @@ export const actions = {
             name,
             description,
             stargazers_count,
+            language,
             homepage,
             html_url
           }) => ({
@@ -32,6 +35,7 @@ export const actions = {
             name,
             description,
             stargazers_count,
+            language,
             homepage,
             html_url
           })
