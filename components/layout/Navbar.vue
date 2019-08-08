@@ -16,10 +16,14 @@
 export default {
   mounted() {
     const nav = document.querySelector("#navbar");
+    if (window.scrollY > 200) {
+      nav.style.background = "rgba(31, 31, 31, 1)";
+      nav.style.padding = "0.2rem";
+    }
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
         nav.style.background = "rgba(31, 31, 31, 1)";
-        nav.style.padding = "0.4rem";
+        nav.style.padding = "0.2rem";
       } else {
         nav.style.background = "rgba(31, 31, 31, 0)";
         nav.style.padding = "1.5rem";
@@ -28,7 +32,6 @@ export default {
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 .nav {
@@ -40,7 +43,7 @@ export default {
   color: #fff;
   padding: 2rem;
   font-size: 1.1rem;
-  transition: all ease-in 300ms;
+  transition: all ease-in 400ms;
 
   .nav-menu {
     display: flex;

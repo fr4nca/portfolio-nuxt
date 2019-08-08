@@ -1,25 +1,9 @@
 <template>
   <div class="content">
-    <div class="grid-container">
-      <div class="lead">
-        <div class="lead-content">
-          <h1>Victor Almeida França</h1>
-          <p>Desenvolvedor WEB e Mobile</p>
-        </div>
-      </div>
-      <div class="skills">
-        <ul class="skills-content">
-          <li>
-            <a href>
-              <img src="~assets/icons/github.svg" class="icon" />
-            </a>
-          </li>
-          <li>
-            <a href>
-              <img src="~assets/icons/github.svg" class="icon" />
-            </a>
-          </li>
-        </ul>
+    <div class="lead">
+      <div class="lead-content">
+        <h1>Victor Almeida França</h1>
+        <p>Desenvolvedor WEB e Mobile</p>
       </div>
     </div>
   </div>
@@ -27,23 +11,18 @@
 
 <style lang="scss" scoped>
 .content {
-  height: 70vh;
+  height: 60vh;
   background: url("~assets/landing.jpg") no-repeat center center/cover;
   color: white;
-
-  .grid-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "lead skills";
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "lead skills";
 
   .lead {
     grid-area: lead;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 51px;
 
     .lead-content {
       font-size: 1.8rem;
@@ -78,19 +57,17 @@
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .content {
-    .grid-container {
-      display: flex;
-      justify-content: center;
-    }
+    height: 50vh;
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
   .content {
-    .grid-container {
-      display: flex;
-      justify-content: center;
-    }
+    height: 40vh;
+    display: flex;
+    justify-content: center;
 
     .lead {
       .lead-content {
