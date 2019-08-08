@@ -13,35 +13,43 @@ export const actions = {
     if (state.repos.length) return;
 
     try {
-      let repos = await fetch(
-        'https://api.github.com/users/fr4nca/repos?page=1&per_page=13&sort=created_at'
-      ).then(res => res.json());
+      let reposData = await fetch('https://api.github.com/graphql', {
+        method: 'POST',
+        body: JSON.stringify({
+          query: `
+          {
+            viewer {
+              repositories(first: 12, orderBy: { direction: DESC, field: CREATED_AT }) {
+                edges {
+                  node {
+                    id
+                    name
+                    createdAt
+                    updatedAt
+                    url
+                    description
+                    primaryLanguage {
+                      name
+                    }
+                    owner {
+                      login
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+            `
+        }),
+        headers: {
+          Authorization: `token ${process.env.github_token}`
+        }
+      }).then(res => res.json());
 
-      console.log(repos);
+      const { edges } = reposData.data.viewer.repositories;
 
-      repos = repos
-        .filter(el => el.fork === false)
-        .map(
-          ({
-            id,
-            name,
-            description,
-            stargazers_count,
-            language,
-            homepage,
-            html_url
-          }) => ({
-            id,
-            name,
-            description,
-            stargazers_count,
-            language,
-            homepage,
-            html_url
-          })
-        );
-
-      commit('updateRepos', repos);
+      commit('updateRepos', edges);
     } catch (err) {
       console.log(err);
     }

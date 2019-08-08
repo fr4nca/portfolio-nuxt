@@ -4,7 +4,7 @@
       <p>My latest projects</p>
     </div>
     <div class="repos-grid">
-      <RepoItem v-for="repo in repos" :key="repo.id" :repo="repo" />
+      <RepoItem v-for="repo in repos" :key="repo.id" :repo="repo.node" />
     </div>
   </div>
 </template>

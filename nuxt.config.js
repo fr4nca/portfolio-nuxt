@@ -1,5 +1,11 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 export default {
   mode: 'universal',
+  env: {
+    github_token: process.env.GITHUB_TOKEN
+  },
   /*
    ** Headers of the page
    */
