@@ -16,17 +16,21 @@
 export default {
   mounted() {
     const nav = document.querySelector("#navbar");
+    const link = document.querySelectorAll(".link");
     if (window.scrollY > 200) {
       nav.style.background = "rgba(31, 31, 31, 1)";
+      link.forEach(link => (link.style.color = "#eee"));
       nav.style.padding = "0.2rem";
     }
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
         nav.style.background = "rgba(31, 31, 31, 1)";
         nav.style.padding = "0.2rem";
+        link.forEach(link => (link.style.color = "#eee"));
       } else {
         nav.style.background = "rgba(31, 31, 31, 0)";
         nav.style.padding = "1.5rem";
+        link.forEach(link => (link.style.color = "#333"));
       }
     });
   }
@@ -40,7 +44,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  color: #fff;
+  color: #333;
   padding: 2rem;
   font-size: 1.1rem;
   transition: all ease-in 400ms;
@@ -60,16 +64,12 @@ export default {
         border-radius: 8px;
         border-bottom: solid 1px transparent;
         text-decoration: none;
-        color: #fff;
-
-        &:visited {
-          color: #fff;
-        }
+        color: #333;
 
         &:hover {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
-          border-bottom: solid 1px #fff;
+          border-bottom: solid 1px #333;
         }
       }
     }

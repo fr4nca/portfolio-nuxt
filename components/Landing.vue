@@ -4,6 +4,9 @@
       <div class="lead-content">
         <h1>Victor Almeida França</h1>
         <p>Desenvolvedor WEB e Mobile</p>
+        <a class="link" href="http://www.github.com/fr4nca" target="_blank">
+          <img src="~assets/icons/github.svg" alt="github" />
+        </a>
       </div>
     </div>
   </div>
@@ -12,8 +15,8 @@
 <style lang="scss" scoped>
 .content {
   height: 60vh;
-  background: url("~assets/landing.jpg") no-repeat center center/cover;
-  color: white;
+  background: #eee;
+  color: #333;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "lead skills";
@@ -29,6 +32,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      .link {
+        margin-top: 10px;
+
+        img {
+          width: 60px;
+        }
+      }
     }
   }
 
