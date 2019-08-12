@@ -42,6 +42,7 @@ export const actions = {
           Authorization: `token ${process.env.github_token}`
         }
       }).then(res => res.json());
+
       const { edges } = reposData.data.viewer.repositories;
 
       commit('updateRepos', edges);
