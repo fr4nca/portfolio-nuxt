@@ -25,6 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .repos {
+  background: #eee;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;

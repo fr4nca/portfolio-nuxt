@@ -19,7 +19,7 @@ export const actions = {
           query: `
           {
             viewer {
-              repositories(first: 12, orderBy: { direction: DESC, field: CREATED_AT }) {
+              repositories(first: 12, orderBy: { direction: DESC, field: CREATED_AT }, privacy: PUBLIC) {
                 edges {
                   node {
                     id
@@ -30,10 +30,6 @@ export const actions = {
                     description
                     primaryLanguage {
                       name
-                    }
-                    owner {
-                      login
-                      url
                     }
                   }
                 }

@@ -1,15 +1,15 @@
 <template>
   <div class="repo">
     <div class="repo-header">
-      <a class="repo-name" :href="repo.html_url" target="_blank">{{repo.name}}</a>
+      <a class="repo-name" :href="repo.url" target="_blank">{{repo.name}}</a>
     </div>
     <div class="repo-body">
       <p>{{repo.description}}</p>
       <p v-if="repo.stargazers_count > 0">{{repo.stargazers_count}}</p>
+      <p v-if="repo.primaryLanguage">Language: {{repo.primaryLanguage.name}}</p>
     </div>
     <div class="repo-footer">
-      <a href>link</a>
-      <a v-if="repo.homepage && repo.homepage !== ''" :href="repo.homepage">Homepage</a>
+      <a :href="repo.url" target="_blank">Code</a>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
     border-bottom: 1px solid #ccc;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    background: #1a1a1a;
+    background: #333;
 
     .repo-name {
       font-size: 20px;
@@ -44,20 +44,29 @@ export default {
 
   .repo-body {
     padding: 1.5rem;
+    p {
+      margin-bottom: 10px;
+    }
   }
 
   .repo-footer {
     padding: 0.8rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
     a {
-      padding: 0.5rem 2rem;
+      width: 300px;
+      padding: 0.8rem;
+      justify-content: center;
       border-radius: 10px;
       text-decoration: none;
       color: #1a1a1a;
       justify-self: center;
+      display: flex;
       background: #ccc;
+      transition: all ease-in 300ms;
+      &:hover {
+        background: #999;
+      }
     }
   }
 }
