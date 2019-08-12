@@ -38,14 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 900px) {
-  .nav {
-    background: #333;
-    color: #eee;
-    padding: 0.2rem;
-  }
-}
-
 .nav {
   background: transparent;
   position: fixed;
@@ -80,6 +72,17 @@ export default {
           border-bottom: solid 1px #333;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    background: #333 !important;
+    padding: 0.2rem !important;
+
+    .link {
+      color: #eee !important;
     }
   }
 }
