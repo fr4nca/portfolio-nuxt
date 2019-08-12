@@ -90,7 +90,6 @@ export default {};
 
     .skills-list {
       display: flex;
-      flex-direction: row;
       justify-content: space-evenly;
     }
   }
@@ -115,6 +114,16 @@ export default {};
         background: #999;
       }
     }
+  }
+}
+
+@media (max-width: 970px) {
+  .skills-list {
+    flex-direction: column;
+  }
+
+  .skills-list ul {
+    margin-top: 1rem;
   }
 }
 </style>
