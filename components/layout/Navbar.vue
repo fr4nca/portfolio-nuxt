@@ -38,6 +38,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 900px) {
+  .nav {
+    background: #333;
+    color: #eee;
+    padding: 0.2rem;
+  }
+}
+
 .nav {
   background: transparent;
   position: fixed;
