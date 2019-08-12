@@ -56,11 +56,7 @@
         </ul>
       </div>
       <div class="curriculo">
-        <a
-          class="btn btn-dark download-resume"
-          target="_blank"
-          href="../../static/pdf/CURRICULO_Victor.pdf"
-        >Currículo / Resumè</a>
+        <a target="_blank" href="/CURRICULO_Victor.pdf">Currículo / Resumè</a>
       </div>
     </div>
   </div>
