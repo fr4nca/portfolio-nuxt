@@ -6,25 +6,14 @@ export default {
   env: {
     github_token: process.env.GITHUB_TOKEN
   },
-  /*
-   ** Headers of the page
-   */
   head: {
-    title: 'Victor Almeida França',
+    title: 'Victor Almeida França | Developer and Programmer',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     script: [{ src: 'https://kit.fontawesome.com/57926f9989.js' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
   /*
    ** Global CSS
