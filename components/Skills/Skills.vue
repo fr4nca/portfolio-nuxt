@@ -64,6 +64,7 @@
 
 <style lang="scss" scoped>
 .skills {
+  height: 40vh;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;

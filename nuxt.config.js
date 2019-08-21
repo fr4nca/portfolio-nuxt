@@ -15,25 +15,10 @@ export default {
     script: [{ src: 'https://kit.fontawesome.com/57926f9989.js' }]
   },
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: ['~/plugins/repos.server.js'],
-  /*
-   ** Nuxt.js modules
-   */
   modules: [],
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {}
   }
 };

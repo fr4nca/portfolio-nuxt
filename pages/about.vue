@@ -1,5 +1,7 @@
 <template>
-  <h1>about</h1>
+  <div class="content">
+    <h1>about</h1>
+  </div>
 </template>
 
 <script>
@@ -9,4 +11,9 @@ export default {
 </script>
 
 <style>
+.content {
+  height: 60vh;
+  background: #eee;
+  color: #333;
+}
 </style>
